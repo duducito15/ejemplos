@@ -17,6 +17,14 @@
         <p>Caso <?php echo $i; ?></p>
         <?php
             }
+
+            /* $variable = literal
+            Entero 10  100  230 -123
+            Reales 20.50  0.0052  - 23.635
+            Booleanos true  false
+            Caracter 'a'  "c"  
+            Cadena de caracteres 'Jefe'  "Admisnitrador" 
+            */
         ?>
         
     </section>
