@@ -27,8 +27,9 @@
              */
 
              $a = 15;
-             $cadena = $a . " nota final del curso";
+             $cadena = $a . " <br> nota final del curso";
              echo $cadena;
+             printf("<br>La nota final del curso es %.2f",$a);
         ?>
     </section>
     <footer>
