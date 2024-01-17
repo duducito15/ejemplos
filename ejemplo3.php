@@ -25,6 +25,9 @@
             Caracter 'a'  "c"  
             Cadena de caracteres 'Jefe'  "Admisnitrador" 
             */
+
+           
+            
         ?>
         
     </section>
