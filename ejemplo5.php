@@ -22,9 +22,13 @@
         $fechaNacimiento = "29/02/1995";
         $numeroHijos = 2;
         $sueldo = 950.50;
-        $activo = false;
-        echo "<br> Valor de Variable "."-"."Tipo de Dato";
-        echo "<br>" .$trabajador. " - ".gettype($trabajador);
+        $activo = true;
+        echo "<br> Valor de Variable "." -> "."Tipo de Dato";
+        echo "<br>" .$trabajador. " -> ".gettype($trabajador);
+        echo "<br>" .$fechaNacimiento. " -> ".gettype($fechaNacimiento);
+        echo "<br>" .$numeroHijos. " -> ".gettype($numeroHijos);
+        echo "<br>" .$sueldo. " -> ".gettype($sueldo);
+        echo "<br>" .$activo. " -> ".gettype($activo);
 
         ?>
     </section>
