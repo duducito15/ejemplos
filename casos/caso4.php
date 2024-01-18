@@ -32,13 +32,27 @@
                     <td>Categoria: </td>
                     <td>
                         <select name="selCategoria" >
-                            <option value="jefe"> Jefe</option>
-                            <option value="admisnitrativo"> Admisnitrativo</option>
-                            <option value="operario"> Operario</option>
+                            <option value="jefe" > Jefe</option>
+                            <option value="admisnitrativo" > Admisnitrativo</option>
+                            <option value="operario" > Operario</option>
                             <option value="practicante"> Practicante</option>
                         </select>
                     </td>
                 </tr>
+                <?php
+                    error_reporting(0);
+                    $empleado = $_POST['txtEmpleado'];
+                    $horas = $_POST['txtHoras'];
+                    $categoria = $_POST['selCategoria'];
+
+                    if ($categoria == 'jefe') {
+                        $selJefe = 'SELECTED';
+                    } else{
+                        $selJefe = "";
+                    }
+
+
+                ?>
                 <tr>
                     <td>
                         <input type="submit" value="Calcular" name="btnCalcular">
