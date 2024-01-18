@@ -47,13 +47,13 @@
                 <tr>
                     <td width="150">Empleado: </td>
                     <td>
-                        <input type="text" name="txtEmpleado" size="60">
+                        <input type="text" name="txtEmpleado" size="60" value="<?php echo $empleado;?>">
                     </td>
                 </tr>
                 <tr>
                     <td>Horas: </td>
                     <td>
-                        <input type="text" name="txtHoras" size="20">
+                        <input type="text" name="txtHoras" size="20" value="<?php echo $horas;?>">
                     </td>
                 </tr>
                 <tr>
@@ -74,6 +74,50 @@
                     </td>
                     <td>
                         <input type="reset" value="Limpiar" name="btnLimpiar">
+                    </td>
+                </tr>
+                <?php
+                if ($categoria == 'jefe') {
+                    $pagoHora = 50;
+                } elseif ($categoria == 'admisnitrativo') {
+                    $pagoHora = 30;
+                } elseif ($categoria == 'operario') {
+                    $pagoHora = 15;
+                } elseif ($categoria == 'practicante') {
+                    $pagoHora = 5;
+                }
+                $sueldoBruto = $pagoHora * $horas;
+                ?>
+                <tr>
+                    <td>Empleado: </td>
+                    <td>
+                        <?php
+                        echo $empleado;
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Horas trabajadas: </td>
+                    <td>
+                        <?php
+                        echo $horas;
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cargo: </td>
+                    <td>
+                    <?php
+                            echo $categoria;
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sueldo a pagar: </td>
+                    <td>
+                    <?php
+                            echo $sueldoBruto;
+                        ?>
                     </td>
                 </tr>
             </table>
