@@ -15,6 +15,34 @@
     </header>
     <section>
         <form action="caso4.php" method="post">
+            <?php
+            error_reporting(0);
+            $empleado = $_POST['txtEmpleado'];
+            $horas = $_POST['txtHoras'];
+            $categoria = $_POST['selCategoria'];
+
+            if ($categoria == 'jefe') {
+                $selJefe = 'SELECTED';
+            } else {
+                $selJefe = "";
+            }
+            if ($categoria == 'administrativo') {
+                $selAdminsitrativo = 'SELECTED';
+            } else {
+                $selAdminsitrativo = "";
+            }
+            if ($categoria == 'operario') {
+                $selOperario = 'SELECTED';
+            } else {
+                $selOperario = "";
+            }
+            if ($categoria == 'practicante') {
+                $selPracticante = 'SELECTED';
+            } else {
+                $selPracticante = "";
+            }
+
+            ?>
             <table border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td width="150">Empleado: </td>
@@ -31,28 +59,15 @@
                 <tr>
                     <td>Categoria: </td>
                     <td>
-                        <select name="selCategoria" >
-                            <option value="jefe" > Jefe</option>
-                            <option value="admisnitrativo" > Admisnitrativo</option>
-                            <option value="operario" > Operario</option>
-                            <option value="practicante"> Practicante</option>
+                        <select name="selCategoria">
+                            <option value="jefe" <?php echo $selJefe ?>> Jefe</option>
+                            <option value="admisnitrativo" <?php echo $selAdminsitrativo ?>> Admisnitrativo</option>
+                            <option value="operario" <?php echo $selOperario ?>> Operario</option>
+                            <option value="practicante" <?php echo $selPracticante ?>> Practicante</option>
                         </select>
                     </td>
                 </tr>
-                <?php
-                    error_reporting(0);
-                    $empleado = $_POST['txtEmpleado'];
-                    $horas = $_POST['txtHoras'];
-                    $categoria = $_POST['selCategoria'];
 
-                    if ($categoria == 'jefe') {
-                        $selJefe = 'SELECTED';
-                    } else{
-                        $selJefe = "";
-                    }
-
-
-                ?>
                 <tr>
                     <td>
                         <input type="submit" value="Calcular" name="btnCalcular">
