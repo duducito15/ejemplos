@@ -53,7 +53,7 @@
     }*/
     // Listar los N primeros elementos de la siguiente serie: 
     // 1/5, -2/10, 3/15, -4/20..N
-    $n = 20;
+    /*$n = 20;
     $i = 1;
     $num = 1;
     $den = 5;
@@ -66,5 +66,30 @@
         $num+=1;
         $den+=5;
         $i++;
-    }
+    }*/
+    /**
+     * ESTRUCTURA REPETITIVA FOR
+     * for(inicializacion; condicion; incremento){
+     *      instrucciones a repetir;
+     * }
+     */
+
+    /* for ($i=10; $i>=1; $i--) { 
+        echo $i."<br>";
+     }*/
+
+     /**
+      * ANIDACION DE ESTRUCTURAS REPETITIVAS
+      */
+      $n = 10;
+      $i = 1;
+      while ($i <= $n) {
+        $j = 1;
+        while ($j <= $i) {
+            echo $i;
+            $j++;
+        }
+        echo "<br>";
+        $i++;
+      }
 ?>
