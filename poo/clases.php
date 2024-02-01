@@ -15,6 +15,14 @@ class Persona{
         echo $this->nombre." tiene ".$this->edad." años.";
     }
 
+    public function comer($comida){
+        echo "<br>Que rico mi almuerzo!!!";
+    }
+
+    public function dormir(){
+        echo "<br>Zzzzzzzzzz";
+    }
+
 }
 
 $persona1 = new Persona; // instanciar
@@ -25,6 +33,7 @@ $persona1->edad = 25;
 $persona1->pais = "Perú";
 
 $persona1->mostrarInformacion();
+$persona1->dormir();
 
 
 
