@@ -16,7 +16,11 @@ class Persona{
     }
 
     public function comer($comida){
-        echo "<br>Que rico mi almuerzo!!!";
+        if($comida=="ceviche"){
+            echo "<br>Hmmmm, que rico gracias";
+        }else {
+            echo "<br>Lo siento, yo solo como ceviche";
+        }
     }
 
     public function dormir(){
@@ -34,6 +38,7 @@ $persona1->pais = "Perú";
 
 $persona1->mostrarInformacion();
 $persona1->dormir();
+$persona1->comer("Chicharron");
 
 
 
