@@ -13,11 +13,11 @@ class GatoSimple
     //Metodos
     public function maulla()
     {
-        echo "Miauuuu";
+        echo "<br>Miauuuu";
     }
     public function ronronea()
     {
-        echo "Mrrrrrrr";
+        echo "<br>Mrrrrrrr";
     }
 
     //Un metodo come peros el gato solo come pescado
@@ -44,6 +44,7 @@ class GatoSimple
 $silvestre = new GatoSimple;
 $tom = new GatoSimple;
 
+
 echo "Hola gatito";
 $silvestre->ronronea();
 echo "<br>toma tus croquetas";
@@ -56,5 +57,9 @@ $tom ->sexo = "macho";
 
 $silvestre->peleaCon($tom);
 
+$alejandra = new GatoSimple;
+$alejandra->sexo ="hembra";
+
+$silvestre->peleaCon($alejandra);
 
 
