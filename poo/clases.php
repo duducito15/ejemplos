@@ -40,8 +40,6 @@ $persona1->mostrarInformacion();
 $persona1->dormir();
 $persona1->comer("Chicharron");
 
-
-
 /* 
 
 $persona2->nombre = "Carlos";
@@ -52,4 +50,8 @@ echo $persona1->nombre." tiene ".$persona1->edad." años.";
 echo "<br>";
 echo $persona2->nombre." tiene ".$persona2->edad." años."; */
 // Crear una clase Automovil
+echo "<br>";
+print_r($persona1);
+echo "<br>";
+var_dump($persona1);
 ?>
